@@ -1,0 +1,234 @@
+<resources>
+
+    <!-- pages -->
+    <dimen name="page_padding_top">48dp</dimen>
+    <dimen name="page_padding_bottom">54dp</dimen>
+
+    <!-- HomeFragment dimen -->
+    <dimen name="top_margin">48dp</dimen>
+
+    <!-- Main activity phone -->
+    <dimen name="phone_main_navigation_bar">48dp</dimen>
+    <dimen name="phone_main_navigation_bar_back_layout_margin_right">15dp</dimen>
+    <dimen name="phone_main_navigation_bar_right_layout_margin_right">3dp</dimen>
+    <dimen name="phone_main_navigation_bar_right_filter_margin_right">10dp</dimen>
+    <dimen name="main_bottom_tab_bar_height">54dp</dimen>
+    <dimen name="main_bottom_tab_bar_img_margin_bottom">0dp</dimen>
+    <dimen name="main_bottom_tab_bar_img_margin_top">7dp</dimen>
+
+    <!-- Search phone -->
+    <dimen name="search_auto_complete_list_section_height">25dp</dimen>
+    <dimen name="search_auto_complete_list_section_margin_left">25dp</dimen>
+    <dimen name="search_auto_complete_list_section_text_size">12sp</dimen>
+    <dimen name="search_auto_complete_list_item_height">50dp</dimen>
+    <dimen name="search_auto_complete_list_item_margin_Left">25dp</dimen>
+    <dimen name="search_auto_complete_list_item_view_margin_left">17dp</dimen>
+    <dimen name="search_auto_complete_list_item_view_height">1dp</dimen>
+    <dimen name="search_auto_complete_list_item_text_size">15sp</dimen>
+    <dimen name="search_auto_complete_list_item_season_text_size">12sp</dimen>
+    <dimen name="phone_search_auto_complete_list_crew_done_bar_margin_top">15dp</dimen>
+    <dimen name="phone_search_auto_complete_list_crew_done_bar_margin_left">5dp</dimen>
+    <dimen name="phone_search_auto_complete_list_crew_header_margin_top">15dp</dimen>
+    <dimen name="phone_search_auto_complete_list_crew_header_margin_left">5dp</dimen>
+    <dimen name="search_auto_complete_list_crew_view_layout_height">180dp</dimen>
+    <dimen name="search_auto_complete_list_crew_view_layout_margin_top">15dp</dimen>
+    <dimen name="search_auto_complete_list_crew_view_layout_margin_bottom">5dp</dimen>
+    <dimen name="search_auto_complete_list_crew_view_text_margin_bottom">20dp</dimen>
+    <dimen name="search_auto_complete_list_crew_done_layout_height">70dp</dimen>
+    <dimen name="search_auto_complete_list_crew_done_margin_left">30dp</dimen>
+    <dimen name="search_auto_complete_list_crew_gridview_padding_left">5dp</dimen>
+
+    <!-- VOD landing page -->
+    <dimen name="vod_landing_indicator_bar_height">22dp</dimen>
+    <dimen name="vod_landing_indicator_margin_right">5dp</dimen>
+    <dimen name="vod_landing_header_bar_height">50dp</dimen>
+    <dimen name="vod_landing_header_title_text_size">19sp</dimen>
+    <dimen name="vod_landing_header_title_margin_left">7dp</dimen>
+    <dimen name="vod_landing_header_title_cell_seperator_height">2dp</dimen>
+    <dimen name="vod_landing_header_title_cell_seperator_margin_top">30dp</dimen>
+    <dimen name="vod_landing_header_title_cell_seperator_margin_bottom">30dp</dimen>
+    <dimen name="vod_landing_listView_cell_margin_left">6dp</dimen>
+    <dimen name="vod_landing_listView_cell_title_text_size">12sp</dimen>
+    <dimen name="vod_landing_listView_cell_margin_top">6dp</dimen>
+    <dimen name="vod_landing_listView_padding_bottom">10dp</dimen>
+    <dimen name="vod_landing_header_sub_title_text_size">11sp</dimen>
+    <dimen name="vod_landing_header_sub_title_margin_left">0dp</dimen>
+    <dimen name="vod_landing_coverFlow_spacing">-100dp</dimen>
+
+    <!-- setting main page phone -->
+    <dimen name="setting_label">50dp</dimen>
+    <dimen name="setting_label_text_margin_left">17dp</dimen>
+    <dimen name="setting_seperatort_margin_left">17dp</dimen>
+    <dimen name="setting_label_text_size">18sp</dimen>
+    <dimen name="setting_label_arrow_margin_right">17dp</dimen>
+    <dimen name="setting_label_arrow_width">9dp</dimen>
+    <dimen name="setting_label_arrow_height">15dp</dimen>
+    <dimen name="setting_seperator_height">1dp</dimen>
+    <dimen name="setting_seperator_width">0dp</dimen>
+    <dimen name="setting_detail_terms_conditions_content_size">15sp</dimen>
+    <dimen name="setting_detail_terms_conditions_title_size">17sp</dimen>
+    <dimen name="setting_detail_terms_conditions_title_margin_top">20dp</dimen>
+    <dimen name="setting_detail_terms_conditions_margin_left">25dp</dimen>
+    <dimen name="setting_detail_terms_conditions_margin_right">25dp</dimen>
+    <dimen name="setting_detail_terms_conditions_content_margin_top">35dp</dimen>
+    <dimen name="setting_detail_login_mtn_palyer_image_width">200dp</dimen>
+    <dimen name="setting_detail_login_mtn_palyer_image_height">40dp</dimen>
+    <dimen name="setting_detail_login_mtn_palyer_image_margin_top">60dp</dimen>
+    <dimen name="setting_detail_login_input_box_width">180dp</dimen>
+    <dimen name="setting_detail_login_input_box_height">33dp</dimen>
+    <dimen name="setting_detail_login_input_box_login_margin_top">45dp</dimen>
+    <dimen name="setting_detail_login_input_box_password_margin_top">23dp</dimen>
+    <dimen name="setting_detail_login_input_box_label_margin_left">13dp</dimen>
+    <dimen name="setting_detail_login_input_box_label_size">15sp</dimen>
+    <dimen name="setting_detail_login_fogot_password_label_size">12sp</dimen>
+    <dimen name="setting_detail_login_fogot_password_margin_top">10dp</dimen>
+    <dimen name="setting_detail_login_button_login_margin_top">48dp</dimen>
+    <dimen name="setting_detail_login_button_label_size">16sp</dimen>
+    <dimen name="setting_detail_login_button_sign_margin_top">30sp</dimen>
+    <dimen name="setting_main_tablet_layout_width">0dp</dimen>
+
+    <!-- VOD detail page -->
+
+    <dimen name="vod_detail_margin_left">12dp</dimen>
+    <dimen name="vod_detail_downloadLayout_height">28dp</dimen>
+    <dimen name="vod_detail_downloadLayout_marginTop">20dp</dimen>
+    <dimen name="vod_detail_poster_height">200dp</dimen>
+    <dimen name="vod_detail_header_title_lable_text_size">22sp</dimen>
+    <dimen name="vod_detail_header_title_lable_margin_top">30dp</dimen>
+    <dimen name="vod_detail_header_sub_lable_text_size">19sp</dimen>
+    <dimen name="vod_detail_header_sub_lable_margin_top">13dp</dimen>
+    <dimen name="vod_detail_episode_scrollView_margin_left">5dp</dimen>
+    <dimen name="vod_detail_episode_scrollView_margin_top">40dp</dimen>
+    <dimen name="vod_detail_content_text_size">14sp</dimen>
+    <dimen name="vod_detail_content_margin_top">56dp</dimen>
+    <dimen name="vod_detail_content_margin_left">12dp</dimen>
+    <dimen name="vod_detail_content_margin_right">12dp</dimen>
+    <dimen name="vod_detail_more_margin_top">12dp</dimen>
+    <dimen name="vod_detail_more_margin_right">20dp</dimen>
+    <dimen name="vod_detail_more_text_size">14sp</dimen>
+    <dimen name="vod_detail_imdb_height">25dp</dimen>
+    <dimen name="vod_detail_imdb_margin_top">70dp</dimen>
+    <dimen name="vod_detail_imdb_margin_left">12dp</dimen>
+    <dimen name="vod_detail_imdb_margin_bottom">56dp</dimen>
+    <dimen name="vod_detail_fraction_number_big_text_size">26sp</dimen>
+    <dimen name="vod_detail_fraction_number_small_text_size">17sp</dimen>
+    <dimen name="vod_detail_fraction_number_margin_left">20dp</dimen>
+    <dimen name="vod_detail_vote_big_text_size">13sp</dimen>
+    <dimen name="vod_detail_vote_small_text_size">13sp</dimen>
+    <dimen name="vod_detail_vote_margin_left">17dp</dimen>
+    <dimen name="vod_detail_imdb_review_margin_right">12dp</dimen>
+    <dimen name="vod_detail_you_might_also_like_margin_left">12dp</dimen>
+    <dimen name="vod_detail_you_might_also_like_margin_right">12dp</dimen>
+    <dimen name="vod_detail_you_might_also_like_cell_horizontalSpacing">12dp</dimen>
+    <dimen name="vod_detail_you_might_also_like_cell_movie_horizontalSpacing">7dp</dimen>
+    <dimen name="vod_detail_you_might_also_like_title_height">50dp</dimen>
+    <dimen name="vod_detail_you_might_also_like_title_text_size">19sp</dimen>
+    <dimen name="vod_detail_you_might_also_like_gridview_padding_bottom">10dp</dimen>
+    <dimen name="vod_detail_seperator_height">2dp</dimen>
+    <dimen name="vod_detail_seperator_margin_top">25dp</dimen>
+    <dimen name="vod_detail_seperator_margin_bottom">25dp</dimen>
+    <dimen name="vod_detail_left_part_margin_left">5dp</dimen>
+    <dimen name="vod_detail_left_part_margin_right">30dp</dimen>
+    <dimen name="vod_detail_cell_title_height">30dp</dimen>
+    <dimen name="vod_detail_cell_title_text_size">13sp</dimen>
+    <dimen name="vod_detail_cell_title_margin_top">8dp</dimen>
+    <dimen name="vod_detail_cell_subtitle_text_size">13sp</dimen>
+    <dimen name="vod_detail_cell_subtitle_margin_top">8dp</dimen>
+    <dimen name="vod_detail_cell_subtitle_margin_left">5dp</dimen>
+    <dimen name="vod_detail_left_part_horizontalScrollView_margin_right">5dp</dimen>
+    <dimen name="vod_detail_episode_cell_margin">20dp</dimen>
+    <dimen name="vod_detail_recommendation_cell_margin">5dp</dimen>
+    <dimen name="vod_detail_download_btn_height">20dp</dimen>
+    <dimen name="vod_detail_right_part_download_btn_text_size">20sp</dimen>
+    <dimen name="vod_detail_download_btn_margin_top">20dp</dimen>
+    <dimen name="vod_detail_right_part_download_btn_margin_left">12dp</dimen>
+    <dimen name="vod_detail_content_provider_label_margin_right">12dp</dimen>
+    <dimen name="vod_detail_content_provider_label_text_size">7sp</dimen>
+    <dimen name="vod_detail_content_provider_logo_width">70dp</dimen>
+    <dimen name="vod_detail_content_provider_logo_height">18dp</dimen>
+    <dimen name="vod_detail_content_provider_margin_top">40px</dimen>
+    <dimen name="vod_detail_content_provider_margin_bottom">6px</dimen>
+
+    <!-- VOD download page -->
+    <dimen name="vod_download_page_topbar_height">48dp</dimen>
+    <dimen name="vod_download_page_download_label_text_size">20sp</dimen>
+    <dimen name="vod_download_page_edit_button_width">55dp</dimen>
+    <dimen name="vod_download_page_edit_button_height">25dp</dimen>
+    <dimen name="vod_download_page_edit_button_margin_right">14dp</dimen>
+    <dimen name="vod_download_page_edit_button_text_size">16sp</dimen>
+    <dimen name="vod_download_page_pause_all_button_width">95dp</dimen>
+    <dimen name="vod_download_page_pause_all_button_height">25dp</dimen>
+    <dimen name="vod_download_page_pause_all_button_margin_right">22dp</dimen>
+    <dimen name="vod_download_page_pause_all_button_text_size">16sp</dimen>
+    <dimen name="vod_download_item_left_delete_button_width">16dp</dimen>
+    <dimen name="vod_download_item_left_delete_button_height">22dp</dimen>
+    <dimen name="vod_download_item_thumbnail_width">335dp</dimen>
+    <dimen name="vod_download_item_thumbnail_height">190dp</dimen>
+    <dimen name="vod_download_item_thumbnail_margin">1dp</dimen>
+    <dimen name="vod_download_item_download_bar_width">200dp</dimen>
+    <dimen name="vod_download_item_download_bar_height">35dp</dimen>
+    <dimen name="vod_download_item_download_bar_switch_button_width">42dp</dimen>
+    <dimen name="vod_download_item_download_bar_delete_button_width">42dp</dimen>
+    <dimen name="vod_download_item_download_bar_percent_margin_top">3dp</dimen>
+    <dimen name="vod_download_item_download_bar_percent_text_size">15dp</dimen>
+    <dimen name="vod_download_item_download_bar_progress_bar_height">5dp</dimen>
+    <dimen name="vod_download_item_download_bar_progress_bar_margin_top">7dp</dimen>
+    <dimen name="vod_download_item_download_bar_progress_bar_margin_left">8dp</dimen>
+    <dimen name="vod_download_item_download_bar_progress_bar_margin_right">8dp</dimen>
+    <dimen name="vod_download_item_program_title_margin_top">17dp</dimen>
+    <dimen name="vod_download_item_program_title_text_size">17sp</dimen>
+    <dimen name="vod_download_item_episode_title_margin_top">3dp</dimen>
+    <dimen name="vod_download_item_episode_title_text_size">19sp</dimen>
+    <dimen name="vod_download_item_info_button_width">25dp</dimen>
+    <dimen name="vod_download_item_info_button_height">25dp</dimen>
+    <dimen name="vod_download_item_info_button_margin_top">22dp</dimen>
+    <dimen name="vod_download_item_info_button_margin_right">23dp</dimen>
+    <dimen name="vod_download_detail_download_bar_switch_button_width">28dp</dimen>
+    <dimen name="vod_download_detail_download_bar_delete_button_width">28dp</dimen>
+    <dimen name="vod_download_detail_download_bar_percent_margin_top">0dp</dimen>
+    <dimen name="vod_download_detail_download_bar_percent_text_size">15dp</dimen>
+    <dimen name="vod_download_detail_download_bar_progress_bar_height">6dp</dimen>
+
+    <!-- home_sub_fragment01_ -->
+    <dimen name="home_sub_fragment01_margintop">88dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tv_size_14">14sp</dimen>
+    <dimen name="tv_size_15">15sp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="actionbar_height">48dp</dimen>
+    <dimen name="big_photo_height">200dp</dimen>
+    <dimen name="normal_padding_5">5dp</dimen>
+    <dimen name="normal_padding_10">10dp</dimen>
+
+    <!-- 四类字体大小 -->
+    <dimen name="micro_text_size">12sp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="medium_text_size">18sp</dimen>
+    <dimen name="large_text_size">22sp</dimen>
+
+    
+    <dimen name="drop_down_list_footer_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_header_progress_bar_height">36dp</dimen>
+     <dimen name="drop_down_list_footer_font_size">14sp</dimen>
+    
+     <dimen name="listview_scrollbar_width">2dp</dimen>
+     
+     <dimen name="head_size">28.0dip</dimen>
+     
+     <dimen name="title_bar_height">44.0dip</dimen>
+     
+     <dimen name="list_item_horizontal_padding">15.0dip</dimen>
+     
+     <dimen name="right_image_width">86.0dip</dimen>
+    <dimen name="right_image_height">60.0dip</dimen>
+     
+    <dimen name="item_image_height">60.0dip</dimen>
+    <dimen name="item_image_width">86.0dip</dimen>
+    
+    <dimen name="progress_inner_size">28dp</dimen>
+    
+    
+    
+</resources>

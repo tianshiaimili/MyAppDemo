@@ -1,0 +1,141 @@
+<resources>
+	<color name="homebg_color">#EFEFEF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark">#000000</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#EEEE00</color>
+    <color name="text_color">#bcbcbc</color>
+    <color name="section_bg">#292929</color>
+    <color name="item_bg">#212121</color>
+    <color name="filter_checked_text_color">#fcdb10</color>
+    <color name="filter_unchecked_text_color">#cfcfcf</color>
+    <color name="filter_background_color">#1e1e1e</color>
+    <color name="filter_seperator_color">#4f4f4f</color>
+    <color name="app_bg">#666666</color>
+    <!-- VOD landing page -->
+    <color name="vod_landing_bg_color">#1e1e1e</color>
+    <color name="vod_landing_indicator_bar_bg_color">#1e1e1e</color>
+    <color name="vod_landing_header_title_text_color">#fcdb10</color>
+    <color name="vod_landing_header_title_cell_seperator">#4f4f4f</color>
+    <color name="vod_landing_listView_cell_title_text_color">#bababa</color>
+    <color name="vod_landing_collection_view_bg_color">#1e1e1e</color>
+    <color name="vod_landing_header_sub_title_text_color">#6c6c6c</color>
+
+    <!-- VOD detail page -->
+    <color name="vod_detail_background_color">#1e1e1e</color>
+    <color name="vod_detail_left_tablet_background_color">#121315</color>
+    <color name="vod_detail_right_tablet_background_color">#000000</color>
+    <color name="vod_detail_seperator_color">#4f4f4f</color>
+    <color name="vod_detail_cell_title_color">#fcdb10</color>
+    <color name="vod_detail_cell_sub_title_color">#bcbcbc</color>
+    <color name="vod_detail_header_title_lable_text_color">#ffffff</color>
+    <color name="vod_detail_header_sub_lable_text_color">#bcbcbc</color>
+    <color name="vod_detail_right_part_download_btn_text_color">#000000</color>
+    <color name="vod_detail_content_text_color">#b1b1b1</color>
+    <color name="vod_detail_right_part_seperator__color">#bcbcbc</color>
+    <color name="vod_detail_fraction_number_text_color"> #ffffff</color>
+    <color name="vod_detail_vote_text_color"> #bcbcbc</color>
+    <color name="vod_detail_fraction_number_small_text_color"> #bcbcbc</color>
+    <color name="vod_detail_you_might_also_like_title_text_color"> #ffffff </color>
+    <color name="vod_detail_you_might_also_like_seperator_color">#4f4f4f</color>
+    <color name="vod_detail_content_provider_text_color"> #ffffff </color>
+
+    <!-- setting page -->
+    <color name="setting_tabel_view_bg_color">#1e1e1e</color>
+    <color name="setting_lable_active_color">#FCBD31</color>
+    <color name="setting_lable_color">#bababa</color>
+    <color name="setting_text_active_color">#000000</color>
+    <color name="setting_seperator_color">#4f4f4f</color>
+    <color name="setting_detail_terms_conditions_title_color">#ffffff</color>
+    <color name="setting_detail_terms_conditions_content_color">#b7b7b7</color>
+    <color name="setting_detail_login_input_label_color">#bcbcbc</color>
+
+    <!-- Search -->
+    <color name="search_auto_complete_list_section_layout_bg">#292929</color>
+    <color name="search_auto_complete_list_section_text_color">#bcbcbc</color>
+    <color name="search_auto_complete_list_item_layout_bg">#212121</color>
+    <color name="search_auto_complete_list_item_view_bg">#4f4f4f</color>
+    <color name="search_auto_complete_list_item_text_color">#bcbcbc</color>
+    <color name="search_auto_complete_list_item_season_text_color">#bcbcbc</color>
+
+    <!-- VOD download page -->
+    <color name="vod_download_page_background">#1e1e1e</color>
+    <color name="vod_download_page_text_color">#d2d2d2</color>
+    <color name="vod_download_item_thumbnail_background">#000000</color>
+    <color name="vod_download_item_percent_text_color">#bcbcbc</color>
+    <color name="vod_download_item_program_title_text_color">#ffffff</color>
+    <color name="vod_download_item_episode_title_text_color">#bcbcbc</color>
+
+    <!-- HomeFragment Color -->
+    <color name="homefragment_top_title_color">#F7587B</color>
+    <color name="homefragment_top_title_select_cancel">#130C0E</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <!-- HomeFragment_sub_Fragment -->
+    <color name="app_default_bg_f5">#f5f5f5</color>
+    <color name="app_default_bg_f3">#f3f3f3</color>
+    <color name="cs_51">#515151</color>
+    <color name="tv_blue">#87CEFF</color>
+    <color name="tv_gray">#343434</color>
+    <color name="home_group_item_e4">#E4E4E4</color>
+    <color name="home_group_item_txt_67">#676767</color>
+    <color name="cs_47">#474747</color>
+    <color name="cs_616365">#616365</color>
+    <color name="bg_f3f2f1">#F3F2F1</color>
+    <color name="cs_ff7f00">#FF7F00</color>
+
+    <!-- 这是弹出列表的颜色值设置 -->
+    <color name="search_toolbar_bg">#ff484B50</color>
+
+    <!-- 弹出的toast的颜色 -->
+    <color name="limit_buy_border_bg">#ffd4bc77</color>
+    <color name="toast_color">#ff2E76B9</color>
+    <color name="login_button">#ff775025</color>
+
+    <!-- 亮蓝色 -->
+    <color name="darkgray">#a9a9a9</color>
+    
+    <color name="gray">#ff808080</color>
+    
+    <color name="drop_down_list_footer_font_color">#A2A3A2</color>
+    
+    
+    
+    <color name="list_divider">#f1f1e8</color>
+    <color name="main_red">#ffcc3131</color>
+    
+    <color name="activity_bg_color">#fff5f5f5</color>
+    
+    <color name="image_loading_bg">#ffefefef</color>
+
+    <color name="divider_day">#ffdddddd</color>
+	
+    <color name="item_local">#ffffffff</color>
+    <color name="item_local_night">#ff1a1a1a</color>
+    <color name="item_title_normal">#ff444444</color>
+    <color name="item_title_disabled">#ff888888</color>
+
+    <color name="ss_comment_from">#ff999999</color>
+    
+    <color name="progress_default_circle_color">#80ffffff</color>
+    <color name="progress_default_progress_color">#33b5e5</color>
+	
+    <color name="holo_green_dark">#ff669900</color>
+	<color name="holo_green_light">#ff99cc00</color>    
+
+	<color name="detail_title_text_color">#ff999999</color>
+	<color name="title_text_color">#ffffffff</color>
+	
+	<color name="detail_divider_day">#ffb4b4b4</color>
+	
+	<!-- 详情图片进度条 -->
+      <color name="default_background_color">@android:color/transparent</color>
+    <color name="default_progress_color">#33b5e5</color>
+    <color name="default_stroke_color">#33b5e5</color>
+    <color name="default_text_color">#333333</color>
+	
+    <color name="itemcolcor">#fff1f6fc</color>
+	
+</resources>
