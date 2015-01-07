@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:splitMotionEvents="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/phone_main_navigation_bar"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+        <!-- 这里就作为 中心显示部分 -->
+        
+        <FrameLayout
+            android:id="@+id/main_activity_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/vod_landing_bg_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_bottom_tab_bar_height"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_activity_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/phone_main_navigation_bar"
+        android:layout_gravity="top"
+        android:background="@drawable/action_bar_bg" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/phone_main_navigation_bar"
+            >
+
+            <RelativeLayout
+                android:id="@+id/main_activity_navigation_bar_back_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="4" >
+
+                <ImageView
+                    android:id="@+id/main_activity_navigation_bar_back_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/action_bar_btn_back"
+                    android:visibility="gone" />
+
+                <com.hua.view.BannerImageViewGif
+                    android:id="@+id/main_activity_navigation_bar_back_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toRightOf="@id/main_activity_navigation_bar_back_img"
+                    android:src="@drawable/welcome4" />
+
+                <!--
+                 <ImageView
+                android:id="@+id/main_activity_navigation_bar_back_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/main_activity_navigation_bar_back_img"
+                android:scaleType="fitCenter"
+                android:src="@drawable/hy" />
+                -->
+                <!--
+            android:src="@drawable/action_bar_logo_mtnplayer" 
+	        android:layout_alignTop="@id/main_activity_navigation_bar_back_img"
+                -->
+
+                <EditText
+                    android:id="@+id/index_search_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/main_activity_navigation_bar_back_logo"
+                    android:background="@drawable/selector_edittext_account"
+                    android:drawableRight="@drawable/app_icon_voice"
+                    android:drawableStart="@drawable/action_bar_btn_search"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:hint="德玛西亚...."
+                    android:paddingBottom="0dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:focusable="false"
+                     />
+            </RelativeLayout>
+
+            <!--
+            no need this part currently. set it gone. 
+            android:background="@drawable/selector_edittext_account"
+            -->
+
+
+            <!--
+        <FrameLayout
+            android:id="@+id/main_activity_navigation_bar_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/main_activity_navigation_bar_title_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_bar_logo_mtnplayer" />
+
+            <TextView
+                android:id="@+id/main_activity_navigation_bar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </FrameLayout>
+            -->
+
+            <LinearLayout
+                android:id="@+id/main_activity_navigation_bar_right_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="@dimen/phone_main_navigation_bar_right_layout_margin_right"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/main_activity_navigation_bar_right_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/phone_main_navigation_bar_right_filter_margin_right"
+                    android:src="@drawable/action_bar_btn_filter" />
+
+                <!--
+                     <ImageView
+                    android:id="@+id/main_activity_navigation_bar_right_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/action_bar_btn_search" />
+                -->
+
+                <ImageButton
+                    android:id="@+id/main_activity_navigation_bar_right_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/app_home_title__camerabutton_selector"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:src="@drawable/android_search_button_icon" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_bottom_tab_bar_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/tab_bg"
+        android:orientation="vertical" />
+
+</FrameLayout>

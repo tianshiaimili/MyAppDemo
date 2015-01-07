@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
@@ -117,28 +118,29 @@ public class WelcomeActivity2 extends BaseActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.welcome_activity2);
 //		myImageLoader = new MyImageLoader(getApplicationContext());
 		welcomeTextView = (TextView) findViewById(R.id.welcome_text);
 //		animation1 = AnimationUtils.loadAnimation(getBaseContext(), R.animator.shake);
 		
-//		new Thread(){
-//			
-//			public void run() {
-//				try {
-//					Thread.sleep(3000);
-//					
-////					welcomeTextView.setAlpha(0.0f);
-////					handler.obtainMessage().sendToTarget();
-//					handler.sendMessage(handler.obtainMessage(5));
-//				} catch (Exception e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//				
-//			};
-//			
-//		}.start();
+		new Thread(){
+			
+			public void run() {
+				try {
+					Thread.sleep(3000);
+					
+//					welcomeTextView.setAlpha(0.0f);
+//					handler.obtainMessage().sendToTarget();
+					handler.sendMessage(handler.obtainMessage(5));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			};
+			
+		}.start();
 	}
 	
 	

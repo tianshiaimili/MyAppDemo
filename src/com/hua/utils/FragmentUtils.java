@@ -10,8 +10,6 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 
-import com.hua.app.BaseFragment;
-
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -23,6 +21,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+
+import com.hua.activity.R;
+import com.hua.app.BaseFragment;
 
 // Referenced classes of package com.pccw.gzmobile.app:
 //            BaseFragment
@@ -36,11 +37,21 @@ public class FragmentUtils
         public abstract void switchTab(String s, boolean flag);
 
         public static final int INVALID_TAB_INDEX = -1;
+        /**主要的FragmentActivity,主要由MainActivityPhone传进来 调用*/
         protected FragmentActivity mFragmentActivity;
+        /**这个是针对 要引入fragment的布局中的对应layout的的ID（这里是FrameLayout） 例如在MainActivityPhone中的R.id.main_activity_fragment_container*/
         protected int mContainerId;
+        /** UI底部Tab的点击响应类，主要由在MainActivityPhone中的 
+         * new FragmentTabSwitcher(this, R.id.main_activity_fragment_container, rootFragmentFeed); 使用*/
         protected FragmentTabSwitcherFeed mSwitcherFeed;
-        protected LinkedHashMap mRootFragmentTags;//���hashmap��һͷ��һͷ���� 
+        /**这个是用来存放UI底部Tab的Map，例如这里主要有 Home 、 Hot、Find、Assistan、Setting这几个tab*/
+        protected LinkedHashMap mRootFragmentTags;
+        /**这个主要是针对每个UI底部的tab的对应的一个Map，
+         * 主要到时方便在某个UITab点击进入新的fragment后，可以做统计，
+         * 然后返回的时候方便操作，例如 一次性就返回到RootTabFragmrnt
+         * （这里的RootTabFragment主要是指Home、Hot、、等等UI底部的Tab）*/
         protected final LinkedHashMap mTabStacks = new LinkedHashMap();
+        /**UI底部Tab的总个数*/
         private final int mTabCount;
         protected Fragment mCurrentFragment;
         protected String mCurrentRootFragmentTag;
@@ -56,7 +67,8 @@ public class FragmentUtils
         {
             return mFragmentActivity;
         }
-
+        
+        /**返回底部UI的Tab个数*/
         public int getTabCount()
         {
             return mTabCount;
@@ -106,36 +118,46 @@ public class FragmentUtils
             return mPreviousRootFragmentTag != null && mPreviousRootFragmentTag.equals(mCurrentRootFragmentTag);
         }
 
+        /**
+         * 这个相当于UI下面的tab 选项 
+         * 主要是当点击时后 做创建等操作
+         */
         public void switchTab(String rootFragmentTag)
         {
             switchTab(rootFragmentTag, true);
         }
 
-
+        /**AbsFragmentTabSwitcher 的方法 在FragmentTabSwitcher中的构造器中调用*/
         public AbsFragmentTabSwitcher(FragmentActivity act, int containerId, FragmentTabSwitcherFeed feed)
         {
             mFragmentActivity = act;
-            if(mFragmentActivity == null)
-                throw new RuntimeException("FragmentActivity can NOT be null.");
+            if(mFragmentActivity == null){
+            	throw new RuntimeException("FragmentActivity can NOT be null.");
+            }
             mContainerId = containerId;
             if(mContainerId == 0)
                 throw new RuntimeException("Container id can NOT be 0.");
             mSwitcherFeed = feed;
-            if(mSwitcherFeed == null)
+            if(mSwitcherFeed == null){
                 throw new RuntimeException("FragmentTabSwitcherFeed can NOT be null.");
+            }
+            /**UI底部Tab项的 集合*/
             LinkedHashSet tagSet = feed.getRootFragmentTags();
             LogUtils2.d("tagSet===="+tagSet.size());
-            if(tagSet == null || tagSet.size() == 0)
+            if(tagSet == null || tagSet.size() == 0){
                 throw new RuntimeException("FragmentTabSwitcherFeed.getRootFragmentTags() returns null or size is 0.");
+            }
             mRootFragmentTags = new LinkedHashMap(3);
             Iterator tagSetIterator = tagSet.iterator();
             for(int index = 0; tagSetIterator.hasNext(); index++)
             {
                 String tag = (String)tagSetIterator.next();
-                if(tag == null)
+                if(tag == null){
                     throw new RuntimeException("tab root fragment tag can NOT be null.");
-                if(tag.equals(""))
+                }
+                if(tag.equals("")){
                     throw new RuntimeException("tab root fragment tag can NOT be empty.");
+                }
                 mRootFragmentTags.put(tag, Integer.valueOf(index));
             }
 
@@ -150,7 +172,8 @@ public class FragmentUtils
     }
 
     /**
-     * һ�������±�tab����
+     * 这个主要是对UI底部的Tab的点击做对应的操作
+     * 例如 改变UITab的颜色 生成新的对应UITab的Fragment内容
      * @author Hua
      *
      */
@@ -160,23 +183,40 @@ public class FragmentUtils
 
         private Context mContext;
         private boolean mHorizontalTabBar;
+        /**底部UI的TabLinearlayout*/
         private LinearLayout mLinearLayout;
         private LayoutInflater mLayoutInflater;
+        /**判断是否已经创建过UITab*/
         private boolean built;
-
+        /**
+         * 这个主要是对UI底部的Tab的点击做对应的操作
+         * 例如 改变UITab的颜色 生成新的对应UITab的Fragment内容
+         *@param context 传入的上下文Context
+         *@param container 在main_activity_phone中的底部的Linearlayout
+         *@param horizontalTabBar 是否为水平方向设计 ，垂直方向是平板的设计
+         *@param FILL_PARENT = -1; 
+         *@param LinearLayout.LayoutParams.MATCH_PARENT = -1; 所以 -1表示的是layout_height的大小
+         *@param WRAP_CONTENT = -2;
+         */
         public FragmentTabBarController(Context context, ViewGroup container, boolean horizontalTabBar)
         {
             mContext = context;
             mHorizontalTabBar = horizontalTabBar;
             mLinearLayout = new LinearLayout(mContext);
             mLayoutInflater = LayoutInflater.from(mContext);
+//            
+//            public static final int FILL_PARENT = -1;
+//            public static final int MATCH_PARENT = -1;
+//            public static final int WRAP_CONTENT = -2;
+            
             if(mHorizontalTabBar)
             {
                 mLinearLayout.setOrientation(0);
                 int tabBarHeight = -2;
-                if(container.getLayoutParams().height == -1)
+                if(container.getLayoutParams().height == -1){
                     tabBarHeight = -1;
-                mLinearLayout.setLayoutParams(new android.widget.LinearLayout.LayoutParams(-1, tabBarHeight));
+                }
+                mLinearLayout.setLayoutParams(new android.widget.LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, tabBarHeight));
                 mLinearLayout.setGravity(16);
                 container.addView(mLinearLayout);
             } else
@@ -199,13 +239,14 @@ public class FragmentUtils
         }
     	
         /**
-         * ���tab ��ˢ��
+         * 刷新并创建底部的UITab
          * @param rebuild
          */
         private void refreshTabBar(boolean rebuild)
         {
-            if(rebuild)
+            if(rebuild){
                 mLinearLayout.removeAllViews();
+            }
             int count = getCount();
             int childCount = mLinearLayout.getChildCount();
             View convertView = null;
@@ -237,7 +278,8 @@ public class FragmentUtils
             }
 
         }
-
+        
+        /**创建底部的UI_Tab*/
         public void createTabBar()
         {
             if(!built)
@@ -261,11 +303,19 @@ public class FragmentUtils
                 return;
             }
         }
-
+        
+        /**返回底部UITab的个数*/
         public abstract int getCount();
-
+        /**这里是对UI底部每个Tab的里面的view做操作，
+         * 例如每个tab中的ImageView和TextView的背景颜色
+         * @param i 对应tab的index 例如 home 是0 、hot 是 1、等
+         * @param view 填充到底部UITab的LinearLayout的子View 这里是tab_bar_item.xml
+         * @param viewgroup 底部UITab的Linearlayout
+         * @param LayoutInflater 用来装载子view
+         */
         public abstract View getView(int i, View view, ViewGroup viewgroup, LayoutInflater layoutinflater);
 
+        /**返回当前UITab对应的view，主要是为改变背景颜色和字体颜色*/
         public final View getItem(int position)
         {
             if(!built)
@@ -284,14 +334,15 @@ public class FragmentUtils
     public static class FragmentTabSwitcher extends AbsFragmentTabSwitcher
     {
 
-
+    	/**FragmentTabSwitcher 的构造器 用来初始化 UI底部的Tab选项*/
         public FragmentTabSwitcher(FragmentActivity act, int containerId, FragmentTabSwitcherFeed feed)
         {
             super(act, containerId, feed);
         }
     	
         /**
-         * 这个相当于 页面下面的tab 选项
+         * 这个相当于UI下面的tab 选项 
+         * 主要是当点击时后 做创建等操作
          */
         public void switchTab(String rootFragmentTag, boolean skipSameTab)
         {
@@ -617,6 +668,11 @@ public class FragmentUtils
     }
     /////////////////////////
 
+    /**
+     * 一个对UI地下的tab部分 的点击做对应的操作的接口
+     * @author yue
+     *
+     */
     public static interface FragmentTabSwitcherFeed
     {
 
@@ -867,19 +923,24 @@ public class FragmentUtils
     {
         act.getSupportFragmentManager().beginTransaction().add(containerId, fragment, tag).commit();
     }
-
+    
+    /**
+     * 把UI底部需要的Tab转换成一个LinkedHashSet，然后方便
+     * 点击返回，后退等操作
+     * @param tags
+     * @return
+     */
     public static LinkedHashSet makeRootFragmentTags(String... tags)
     {
         if(tags == null || tags.length == 0)
             return null;
         LinkedHashSet tagSet = new LinkedHashSet(tags.length);
         int size = tags.length;
-        for(int i = 0; i < size; i++)
+        for(int i = 0; i < size; i++){
             tagSet.add(tags[i]);
+        }
 
 //        LogUtils2.i("tags[i]="+tags[0]+tags[1]+tags[2]);
-        
-        
         return tagSet;
     }
 
