@@ -125,7 +125,7 @@ public class BannerImageViewGif extends ImageView implements OnClickListener{
 	}
 	
 	@Override
-	protected void onDraw(Canvas canvas) {
+	protected void onDraw(final Canvas canvas) {
 		if(mMovie == null){
 			  // mMovie等于null，说明是张普通的图片，则直接调用父类的onDraw()方法  
 			super.onDraw(canvas);
@@ -136,9 +136,10 @@ public class BannerImageViewGif extends ImageView implements OnClickListener{
 				// 如果允许自动播放，就调用playMovie()方法播放GIF动画  
 				playMovie(canvas);
 				invalidate();
+				LogUtils2.i("----after invalidate()");
 				
 			}else {
-				
+				LogUtils2.w("-----playMovie(canvas)");
 				 // 不允许自动播放时，判断当前图片是否正在播放 
 				if(isPlaying){
 					
@@ -228,6 +229,7 @@ public class BannerImageViewGif extends ImageView implements OnClickListener{
      * @return 播放完成返回true，未完成返回false。 
      */  
     private boolean playMovie(Canvas canvas) {  
+    	LogUtils2.i("----playMovie");
         long now = SystemClock.uptimeMillis();  
         if (mMovieStart == 0) {  
             mMovieStart = now;  

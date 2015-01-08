@@ -22,7 +22,7 @@ import com.nineoldandroids.animation.ObjectAnimator;
  * @author Hua
  *
  */
-public class WelcomeActivity2 extends BaseActivity {
+public class WelcomeActivity extends BaseActivity {
 
 
 	private TextView welcomeTextView;

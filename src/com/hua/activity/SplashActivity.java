@@ -69,7 +69,7 @@ public class SplashActivity extends BaseActivity {
 		} else {
 
 			LogUtils2.d("+++++++++++++");
-			Intent intent = new Intent(getBaseContext(), WelcomeActivity2.class);
+			Intent intent = new Intent(getBaseContext(), WelcomeActivity.class);
 			// Intent intent = new Intent(getBaseContext(),
 			// WelcomeActivity.class);
 			startActivity(intent);

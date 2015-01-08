@@ -21,6 +21,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.hua.fragment.HomeFragment;
+import com.hua.fragment.TestPullToRightFragment;
 import com.hua.utils.FragmentUtils;
 import com.hua.utils.FragmentUtils.FragmentTabBarController;
 import com.hua.utils.FragmentUtils.FragmentTabSwitcher;
@@ -65,7 +66,9 @@ public class MainActivityPhone extends BaseActivity {
 	 * 用来显示自定的dialog
 	 */
 	// private SweetAlertDialog mSweetAlertDialog;
-
+	//滑动的Menu...
+//	private SlidingMenu mSlidingMenu;
+	
 	/**
 	 * 当前版本号
 	 */
@@ -74,6 +77,7 @@ public class MainActivityPhone extends BaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+//		initSlidingMenu();
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.main_activity_phone);
 		initFragmentTabSwitcher() ;
@@ -144,7 +148,21 @@ public class MainActivityPhone extends BaseActivity {
 			}
 		});
 		
+		//test
+//		initRightFragment();
+		
+		
 	}
+	
+	//test right fragemnt
+//	public void initRightFragment(){
+//		mSlidingMenu.setSecondaryMenu(R.layout.main_right_layout);
+//		FragmentTransaction mFragementTransaction = getSupportFragmentManager()
+//				.beginTransaction();
+//		Fragment mFrag = new LeftFragment();
+//		mFragementTransaction.replace(R.id.main_right_fragment, mFrag);
+//		mFragementTransaction.commit();
+//	}
 	
 	
 	/**
@@ -160,6 +178,7 @@ public class MainActivityPhone extends BaseActivity {
 					/**
 					 * 
 					 */
+//					return new TestPullToRightFragment();
 					return new HomeFragment();
 
 				} else if (TAB_HOT.equalsIgnoreCase(tag)) {
@@ -303,10 +322,38 @@ public class MainActivityPhone extends BaseActivity {
 		mFragmentTabSwitcher.switchTab(TAB_HOME);
 
 	}
-
+	
+	/***设置返回按钮的可见一否*/
 	public void setBackButtonVisible(boolean visible) {
 		backButton.setVisibility(visible ? View.VISIBLE : View.INVISIBLE);
 	}
+	
+
+//	private void initSlidingMenu() {
+//		DisplayMetrics dm = new DisplayMetrics();
+//		getWindowManager().getDefaultDisplay().getMetrics(dm);
+//		int mScreenWidth = dm.widthPixels;// 获取屏幕分辨率宽度
+//		setBehindContentView(R.layout.main_left_layout);// 设置左菜单，就是向右滑动显示出来的菜单
+////		set
+//		FragmentTransaction mFragementTransaction = getSupportFragmentManager()
+//				.beginTransaction();
+//		Fragment mFrag = new LeftFragment();
+//		mFragementTransaction.replace(R.id.main_left_fragment, mFrag);
+//		mFragementTransaction.commit();
+//		// customize the SlidingMenu
+//		mSlidingMenu = getSlidingMenu();
+//		mSlidingMenu.setMode(SlidingMenu.LEFT);// 设置是左滑还是右滑，还是左右都可以滑，我这里左右都可以滑
+//		mSlidingMenu.setShadowWidth(mScreenWidth / 50);// 设置阴影宽度 就是滑动时页边的阴影
+//		mSlidingMenu.setShadowDrawable(R.drawable.shadow_left);// 设置左菜单阴影图片
+//		mSlidingMenu.setBehindOffset(mScreenWidth / 5);// 设置菜单宽度
+//		mSlidingMenu.setFadeDegree(0.35f);// 设置淡入淡出的比例
+//		mSlidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);//设置滑动的模式
+//		mSlidingMenu.setSecondaryShadowDrawable(R.drawable.shadow_right);// 设置右菜单阴影图片
+//		mSlidingMenu.setFadeEnabled(true);// 设置滑动时菜单的是否淡入淡出
+//		mSlidingMenu.setBehindScrollScale(0.333f);// 设置滑动时拖拽效果
+//		
+//		
+//	}
 	
 	
 	/**

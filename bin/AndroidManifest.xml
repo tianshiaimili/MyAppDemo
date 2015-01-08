@@ -43,7 +43,7 @@
         </activity>
         
         <activity android:name=".MainActivityPhone"></activity>
-        <activity android:name=".WelcomeActivity2"></activity>
+        <activity android:name=".WelcomeActivity"></activity>
         
         
         <!-- 
