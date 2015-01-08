@@ -284,7 +284,7 @@ public class MainActivityPhone extends BaseActivity {
 						////
 						setCurrentSelected(v);
 						//
-						if(TAB_HOT.equals(tag) && navigationBar != null){
+						if((TAB_HOME.equals(tag) || TAB_HOT.equals(tag)) && navigationBar != null){
 							navigationBar.setVisibility(View.GONE);
 						}else {
 							
@@ -319,6 +319,7 @@ public class MainActivityPhone extends BaseActivity {
 		});
 		
 		// /首先把TVfragmentTab生成
+//		navigationBar.setVisibility(View.GONE);
 		mFragmentTabSwitcher.switchTab(TAB_HOME);
 
 	}
@@ -449,6 +450,7 @@ public class MainActivityPhone extends BaseActivity {
 		super.onResume();
 		setBackButtonVisible(false);
 		navigationBar = (RelativeLayout) findViewById(R.id.main_activity_navigation_bar);
+		navigationBar.setVisibility(View.GONE);
 		searchButton = (ImageView) findViewById(R.id.main_activity_navigation_bar_right_search);
 		searchButton.setOnClickListener(new OnClickListener() {
 			@Override

@@ -313,6 +313,12 @@
         <item name="shadow_bottom">@drawable/shadow_bottom</item>
     </style>
      
-     
+     <!-- 这个是在HomeFragment中 在头部Bar水平的item上面TextView的style -->
+    <style name="top_category_scroll_view_item_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
      
 </resources>
