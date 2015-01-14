@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">  
+   <!--  <gradient android:startColor="#505050" android:endColor="#C0C0C0"  
+            android:angle="0"/>   -->
+             <gradient android:startColor="#EFEFEF" android:endColor="#EFEFEF"  
+            android:angle="0"/>  
+            
+    <corners android:radius="0dp" />  
+    
+</shape>  
+<!-- 这个是scrollbar的轨道颜色 -->

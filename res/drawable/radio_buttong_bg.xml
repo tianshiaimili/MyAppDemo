@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:state_pressed="true"><shape>
+<!--     <item android:state_pressed="true"><shape>
             <gradient android:angle="270.0" android:endColor="@color/main_red" android:startColor="@color/main_red" />
 
             <corners android:radius="2.0dip" />
@@ -15,7 +15,7 @@
             <gradient android:angle="270.0" android:endColor="@color/main_red" android:startColor="@color/main_red" />
 
             <corners android:radius="2.0dip" />
-        </shape></item>
+        </shape></item> -->
     <item><shape>
             <gradient android:angle="270.0" android:endColor="#00000000" android:startColor="#00000000" />
 

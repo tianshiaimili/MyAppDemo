@@ -1,19 +1,29 @@
 package com.hua.fragment;
 
-import com.hua.utils.LogUtils2;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.Gravity;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
-public class TestFragment extends Fragment{
+import com.hua.utils.LogUtils2;
+import com.hua.widget.viewimage.Animations.SliderLayout;
+import com.hua.widget.viewimage.SliderTypes.BaseSliderView;
+import com.hua.widget.viewimage.SliderTypes.BaseSliderView.OnSliderClickListener;
+/**
+ * 今日头条的fragment
+ * @author zero
+ *
+ */
+public class HeadNewsFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener,
+OnSliderClickListener{
 
+	
+	/**
+	 * 头部的横幅滑动布局
+	 */
+    protected SliderLayout mDemoSlider;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +75,20 @@ public class TestFragment extends Fragment{
 	public void onResume() {
 		super.onResume();
 		LogUtils2.i("***onResume***");
+	}
+
+
+	//SwipeRefreshLayout.OnRefreshListener
+	@Override
+	public void onRefresh() {
+		
+	}
+
+
+	///OnSliderClickListener
+	@Override
+	public void onSliderClick(BaseSliderView slider) {
+		
 	}
 	
 }
