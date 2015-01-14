@@ -1,13 +1,19 @@
 package com.hua.fragment;
 
+import java.util.HashMap;
+import java.util.List;
+
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.hua.bean.NewModle;
 import com.hua.utils.LogUtils2;
+import com.hua.widget.swipelistview.SwipeListView;
 import com.hua.widget.viewimage.Animations.SliderLayout;
 import com.hua.widget.viewimage.SliderTypes.BaseSliderView;
 import com.hua.widget.viewimage.SliderTypes.BaseSliderView.OnSliderClickListener;
@@ -24,7 +30,26 @@ OnSliderClickListener{
 	 * 头部的横幅滑动布局
 	 */
     protected SliderLayout mDemoSlider;
-	
+    /**the SwipeRefreshLayout which can pull to refresh*/
+    protected SwipeRefreshLayout swipeLayout;
+    /**
+     * 整个布局的listview
+     */
+//    @ViewById(R.id.listview)
+    protected SwipeListView mListView;
+//    @ViewById(R.id.progressBar)
+    protected ProgressBar mProgressBar;
+    protected HashMap<String, String> url_maps;
+
+    protected HashMap<String, NewModle> newHashMap;
+
+//    @Bean
+    protected NewAdapter newAdapter;
+    protected List<NewModle> listsModles;
+    private int index = 0;
+    private boolean isRefresh = false;
+    
+    
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
