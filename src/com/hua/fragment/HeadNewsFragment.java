@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.hua.adapter.NewAdapter;
 import com.hua.bean.NewModle;
 import com.hua.utils.LogUtils2;
 import com.hua.widget.swipelistview.SwipeListView;
