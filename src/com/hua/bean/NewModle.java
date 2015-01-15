@@ -2,7 +2,11 @@
 package com.hua.bean;
 
 import java.util.List;
-
+/**
+ * 对新闻信息数据格式包装的 po类
+ * @author zero
+ *
+ */
 public class NewModle extends BaseModle {
     /**
      * 

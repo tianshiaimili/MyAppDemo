@@ -44,7 +44,7 @@ public class HttpUtil {
     public static String getByHttpClient(Context context, String strUrl,
             NameValuePair... nameValuePairs) throws Exception {
         String result = CustomHttpClient.getFromWebByHttpClient(context, strUrl, nameValuePairs);
-
+        
         return result;
     }
 

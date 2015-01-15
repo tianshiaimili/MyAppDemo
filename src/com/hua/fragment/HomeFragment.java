@@ -347,7 +347,7 @@ public class HomeFragment extends Fragment {
         @Override
         public void onPageScrollStateChanged(int state) {
 			
-        	LogUtils2.i("onPageScrollStateChanged----------------");
+//        	LogUtils2.i("onPageScrollStateChanged----------------");
         	
 			if (state == ViewPager.SCROLL_STATE_DRAGGING) {
 				isEnd = false;
@@ -372,7 +372,7 @@ public class HomeFragment extends Fragment {
         @Override
         public void onPageScrolled(int position, float positionOffset,
 				int positionOffsetPixels) {
-        	LogUtils2.e("position == "+position);
+//        	LogUtils2.e("position == "+position);
 			if(!isEnd){
 				if(currentFragmentIndex == position){
 					endPosition = scroll_distance * currentFragmentIndex + 
@@ -391,7 +391,7 @@ public class HomeFragment extends Fragment {
 				buttom_indicate_line.startAnimation(mAnimation);
 				mColumnHorizontalScrollView.invalidate();
 				beginPosition = endPosition;
-				LogUtils2.w("onPageScrolled over-----");
+//				LogUtils2.w("onPageScrolled over-----");
 			}
         	
         }
@@ -400,28 +400,26 @@ public class HomeFragment extends Fragment {
         public void onPageSelected(int position) {
         	
 //        	LogUtils2.i("******onPageSelected scroll_distance= "+scroll_distance);
-        	LogUtils2.e("******onPageSelected endPosition = "+endPosition);
+//        	LogUtils2.e("******onPageSelected endPosition = "+endPosition);
 			Animation animation = new TranslateAnimation(endPosition, position* scroll_distance, 0, 0);
 			animation.setInterpolator(new AccelerateDecelerateInterpolator());
 			beginPosition = position * scroll_distance;
 			endPosition = position * scroll_distance;
-			LogUtils2.w("******onPageSelected beginPosition = "+beginPosition);
-			LogUtils2.d("******onPageSelected endPosition = "+endPosition);
+//			LogUtils2.w("******onPageSelected beginPosition = "+beginPosition);
+//			LogUtils2.d("******onPageSelected endPosition = "+endPosition);
 			currentFragmentIndex = position;
     		
         	mViewPager.setCurrentItem(position);
            int temp_scroll_distance = selectTab(position);
            
 			if (animation != null) {
-				LogUtils2.d("******onPageSelected");
+//				LogUtils2.d("******onPageSelected");
 				animation.setFillAfter(true);
 				animation.setDuration(bottom_indicate_line_duration);
 				buttom_indicate_line.startAnimation(animation);
 //				mColumnHorizontalScrollView.smoothScrollTo((currentFragmentIndex - 1) * temp_scroll_distance , 0);
 				mColumnHorizontalScrollView.smoothScrollTo(temp_scroll_distance , 0);
 			}
-
-			
             
         }
     };

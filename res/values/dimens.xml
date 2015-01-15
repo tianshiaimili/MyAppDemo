@@ -213,7 +213,7 @@
     <dimen name="drop_down_list_header_progress_bar_height">36dp</dimen>
      <dimen name="drop_down_list_footer_font_size">14sp</dimen>
     
-     <dimen name="listview_scrollbar_width">2dp</dimen>
+     <dimen name="listview_scrollbar_width">5dp</dimen>
      
      <dimen name="head_size">28.0dip</dimen>
      

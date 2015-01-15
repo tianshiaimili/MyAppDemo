@@ -73,6 +73,9 @@ public class MainActivityPhone extends BaseActivity {
 	 * 当前版本号
 	 */
 	private int currentVersionCode;
+	
+	/**the tab_bar_container (即底部的bar部分的LinearLayout)*/
+	private static LinearLayout tab_bar_container;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -90,6 +93,7 @@ public class MainActivityPhone extends BaseActivity {
 //				LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
 //		mHomeSearchBarPopupWindow.setOnSearchBarItemClickListener(new MyOnSearchBarItemClickListener());
 		//
+		tab_bar_container = (LinearLayout) findViewById(R.id.tab_bar_container);
 		mEditText = (EditText) findViewById(R.id.index_search_edit);
 		mEditText.setInputType(InputType.TYPE_NULL);
 //		mEditText.setOnFocusChangeListener(new OnFocusChangeListener() {
@@ -153,18 +157,6 @@ public class MainActivityPhone extends BaseActivity {
 		
 		
 	}
-	
-	//test right fragemnt
-//	public void initRightFragment(){
-//		mSlidingMenu.setSecondaryMenu(R.layout.main_right_layout);
-//		FragmentTransaction mFragementTransaction = getSupportFragmentManager()
-//				.beginTransaction();
-//		Fragment mFrag = new LeftFragment();
-//		mFragementTransaction.replace(R.id.main_right_fragment, mFrag);
-//		mFragementTransaction.commit();
-//	}
-	
-	
 	/**
 	 * 初始化 页面地下的tab选择器
 	 */
@@ -470,6 +462,11 @@ public class MainActivityPhone extends BaseActivity {
 	
 	public  void startFragment(Fragment fragment) {
 		mFragmentTabSwitcher.pushFragment(fragment);
+	}
+	
+	public static LinearLayout getTab_Bar_Container(){
+		
+		return tab_bar_container;
 	}
 	
 	

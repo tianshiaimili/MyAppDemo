@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.hua.activity.R;
 import com.hua.bean.NewModle;
+import com.hua.utils.LogUtils2;
 import com.hua.utils.Options;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -72,13 +73,14 @@ public class NewItemView extends LinearLayout {
 		View contentView = LayoutInflater.from(mContext).inflate(R.layout.item_new, null);
 		leftImage = (ImageView) contentView.findViewById(R.id.left_image);
 		itemTitle = (TextView) contentView.findViewById(R.id.item_title);
-		itemConten = (TextView) findViewById(R.id.item_content);
-		articleLayout = (RelativeLayout) findViewById(R.id.article_top_layout);
-		imageLayout = (LinearLayout) findViewById(R.id.layout_image);
-		item_image0 = (ImageView) findViewById(R.id.item_image_0);
-		item_image1 = (ImageView) findViewById(R.id.item_image_1);
-		item_image2 = (ImageView) findViewById(R.id.item_image_2);
-		itemAbstract = (TextView) findViewById(R.id.item_abstract);
+		itemConten = (TextView) contentView.findViewById(R.id.item_content);
+		articleLayout = (RelativeLayout) contentView.findViewById(R.id.article_top_layout);
+		imageLayout = (LinearLayout) contentView.findViewById(R.id.layout_image);
+		item_image0 = (ImageView) contentView.findViewById(R.id.item_image_0);
+		item_image1 = (ImageView) contentView.findViewById(R.id.item_image_1);
+		item_image2 = (ImageView) contentView.findViewById(R.id.item_image_2);
+		itemAbstract = (TextView) contentView.findViewById(R.id.item_abstract);
+		addView(contentView);
 	}
 	
 	

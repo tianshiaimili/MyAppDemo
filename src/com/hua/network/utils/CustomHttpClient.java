@@ -132,9 +132,12 @@ public class CustomHttpClient {
                 sb.append(String.format("%s=%s",
                         nameValuePairs[i].getName(),
                         nameValuePairs[i].getValue()));
+                LogUtils2.w(" nameValuePairs[i].getName() = "+ nameValuePairs[i].getName());
+                LogUtils2.w(" nameValuePairs[i].getValue() = "+ nameValuePairs[i].getValue());
             }
         }
         Log.i(TAG, sb.toString());
+        LogUtils2.i("ready url = "+sb.toString());
         // HttpGet连接对象
         HttpGet httpRequest = new HttpGet(sb.toString());
         // 取得HttpClient对象
